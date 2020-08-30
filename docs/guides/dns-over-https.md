@@ -45,6 +45,17 @@ tar -xvzf cloudflared-stable-linux-arm.tgz
 sudo cp ./cloudflared /usr/local/bin
 sudo chmod +x /usr/local/bin/cloudflared
 cloudflared -v
+``` 
+
+#### ARM64 architecture (Raspberry Pi running a 64-bit OS such as Ubuntu Server)
+
+Similiar to the ARM instructions above but we have to use the 64-bit ARM binaries instead.  These can be found at <https://github.com/cloudflare/cloudflared/releases>.  Below is an example, though check for later versions.  Run the binary with the `-v` flag to ensure it is working:
+
+```bash
+wget https://github.com/cloudflare/cloudflared/releases/download/2020.8.2/cloudflared-linux-arm64
+sudo cp ./cloudflared-linux-arm64 /usr/local/bin/cloudflared
+sudo chmod +x /usr/local/bin/cloudflared
+cloudflared -v
 ```
 
 ### Configuring `cloudflared` to run on startup
